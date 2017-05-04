@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang='en'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<title>Latency Test Page</title>
+<style> img { padding: 2px } </style>
+<script>
+start = new Date;
+/* 
+ * Detect when an img's content has loaded:
+ * https://stackoverflow.com/a/11071687
+ * Detect when a page has had all content loaded:
+ * https://stackoverflow.com/a/6902404
+ *   Resource suggested by above answer (cross-browser):
+ *   https://github.com/dperini/ContentLoaded
+ */
+var counter = 0, len = 0, cntr = 0;
+
+function incrementCounter() {
+    counter++;
+    t    = new Date - start;
+    cntr.innerHTML = 'Loaded '+counter+'/'+len+' : <b>'+(t/1000)+' seconds</b>';
+}
+
+function monitorLoading() {
+  cntr = document.getElementById('cnt');
+  var imgs = document.getElementsByTagName('img');
+  len = imgs.length;
+  // Works in FF, Chrome, not IE
+  [].forEach.call( imgs, function( img ) {
+    img.addEventListener( 'load', incrementCounter, false );
+  } );
+}
+
+/*! contentloaded.min.js - https://github.com/dperini/ContentLoaded - Author: Diego Perini - License: MIT */
+function contentLoaded(b,i){var j=false,k=true,a=b.document,l=a.documentElement,f=a.addEventListener,h=f?'addEventListener':'attachEvent',n=f?'removeEventListener':'detachEvent',g=f?'':'on',c=function(d){if(d.type=='readystatechange'&&a.readyState!='complete')return;(d.type=='load'?b:a)[n](g+d.type,c,false);if(!j&&(j=true))i.call(b,d.type||d)},m=function(){try{l.doScroll('left')}catch(e){setTimeout(m,50);return}c('poll')};if(a.readyState=='complete')i.call(b,'lazy');else{if(!f&&l.doScroll){try{k=!b.frameElement}catch(e){}if(k)m()}a[h](g+'DOMContentLoaded',c,false);a[h](g+'readystatechange',c,false);b[h](g+'load',c,false)}}
+
+
+contentLoaded(window, monitorLoading);
+</script>
+</head><body>
+<h3>Generated on Thu May  4 11:02:56 EDT 2017
+</h3>
+
+This page is entirely static (no server-side work being done) and is
+designed to provide a large number of small PNG images for
+latency/timing analysis on our network.
+
+<div id='cnt'>Progress...</div>
+<hr>
+<img src='img/0001.png'>
+<img src='img/0002.png'>
+<img src='img/0003.png'>
+<img src='img/0004.png'>
+<img src='img/0005.png'>
+<img src='img/0006.png'>
+<img src='img/0007.png'>
+<img src='img/0008.png'>
+<img src='img/0009.png'>
+<img src='img/0010.png'>
+<img src='img/0011.png'>
+<img src='img/0012.png'>
+<img src='img/0013.png'>
+<img src='img/0014.png'>
+<img src='img/0015.png'>
+<img src='img/0016.png'>
+<img src='img/0017.png'>
+<img src='img/0018.png'>
+<img src='img/0019.png'>
+<img src='img/0020.png'>
+<img src='img/0021.png'>
+<img src='img/0022.png'>
+<img src='img/0023.png'>
+<img src='img/0024.png'>
+<img src='img/0025.png'>
+<img src='img/0026.png'>
+<img src='img/0027.png'>
+<img src='img/0028.png'>
+<img src='img/0029.png'>
+<img src='img/0030.png'>
+<img src='img/0031.png'>
+<img src='img/0032.png'>
+<img src='img/0033.png'>
+<img src='img/0034.png'>
+<img src='img/0035.png'>
+<img src='img/0036.png'>
+<img src='img/0037.png'>
+<img src='img/0038.png'>
+<img src='img/0039.png'>
+<img src='img/0040.png'>
+<img src='img/0041.png'>
+<img src='img/0042.png'>
+<img src='img/0043.png'>
+<img src='img/0044.png'>
+<img src='img/0045.png'>
+<img src='img/0046.png'>
+<img src='img/0047.png'>
+<img src='img/0048.png'>
+<img src='img/0049.png'>
+<img src='img/0050.png'>
+<img src='img/0051.png'>
+<img src='img/0052.png'>
+<img src='img/0053.png'>
+<img src='img/0054.png'>
+<img src='img/0055.png'>
+<img src='img/0056.png'>
+<img src='img/0057.png'>
+<img src='img/0058.png'>
+<img src='img/0059.png'>
+<img src='img/0060.png'>
+<img src='img/0061.png'>
+<img src='img/0062.png'>
+<img src='img/0063.png'>
+<img src='img/0064.png'>
+<img src='img/0065.png'>
+<img src='img/0066.png'>
+<img src='img/0067.png'>
+<img src='img/0068.png'>
+<img src='img/0069.png'>
+<img src='img/0070.png'>
+<img src='img/0071.png'>
+<img src='img/0072.png'>
+<img src='img/0073.png'>
+<img src='img/0074.png'>
+<img src='img/0075.png'>
+<img src='img/0076.png'>
+<img src='img/0077.png'>
+<img src='img/0078.png'>
+<img src='img/0079.png'>
+<img src='img/0080.png'>
+<img src='img/0081.png'>
+<img src='img/0082.png'>
+<img src='img/0083.png'>
+<img src='img/0084.png'>
+<img src='img/0085.png'>
+<img src='img/0086.png'>
+<img src='img/0087.png'>
+<img src='img/0088.png'>
+<img src='img/0089.png'>
+<img src='img/0090.png'>
+<img src='img/0091.png'>
+<img src='img/0092.png'>
+<img src='img/0093.png'>
+<img src='img/0094.png'>
+<img src='img/0095.png'>
+<img src='img/0096.png'>
+<img src='img/0097.png'>
+<img src='img/0098.png'>
+<img src='img/0099.png'>
+<img src='img/0100.png'>
+<img src='img/0101.png'>
+<img src='img/0102.png'>
+<img src='img/0103.png'>
+<img src='img/0104.png'>
+<img src='img/0105.png'>
+<img src='img/0106.png'>
+<img src='img/0107.png'>
+<img src='img/0108.png'>
+<img src='img/0109.png'>
+<img src='img/0110.png'>
+<img src='img/0111.png'>
+<img src='img/0112.png'>
+<img src='img/0113.png'>
+<img src='img/0114.png'>
+<img src='img/0115.png'>
+<img src='img/0116.png'>
+<img src='img/0117.png'>
+<img src='img/0118.png'>
+<img src='img/0119.png'>
+<img src='img/0120.png'>
+<img src='img/0121.png'>
+<img src='img/0122.png'>
+<img src='img/0123.png'>
+<img src='img/0124.png'>
+<img src='img/0125.png'>
+<img src='img/0126.png'>
+<img src='img/0127.png'>
+<img src='img/0128.png'>
+<img src='img/0129.png'>
+<img src='img/0130.png'>
+<img src='img/0131.png'>
+<img src='img/0132.png'>
+<img src='img/0133.png'>
+<img src='img/0134.png'>
+<img src='img/0135.png'>
+<img src='img/0136.png'>
+<img src='img/0137.png'>
+<img src='img/0138.png'>
+<img src='img/0139.png'>
+<img src='img/0140.png'>
+<img src='img/0141.png'>
+<img src='img/0142.png'>
+<img src='img/0143.png'>
+<img src='img/0144.png'>
+<img src='img/0145.png'>
+<img src='img/0146.png'>
+<img src='img/0147.png'>
+<img src='img/0148.png'>
+<img src='img/0149.png'>
+<img src='img/0150.png'>
+<img src='img/0151.png'>
+<img src='img/0152.png'>
+<img src='img/0153.png'>
+<img src='img/0154.png'>
+<img src='img/0155.png'>
+<img src='img/0156.png'>
+<img src='img/0157.png'>
+<img src='img/0158.png'>
+<img src='img/0159.png'>
+<img src='img/0160.png'>
+<img src='img/0161.png'>
+<img src='img/0162.png'>
+<img src='img/0163.png'>
+<img src='img/0164.png'>
+<img src='img/0165.png'>
+<img src='img/0166.png'>
+<img src='img/0167.png'>
+<img src='img/0168.png'>
+<img src='img/0169.png'>
+<img src='img/0170.png'>
+<img src='img/0171.png'>
+<img src='img/0172.png'>
+<img src='img/0173.png'>
+<img src='img/0174.png'>
+<img src='img/0175.png'>
+<img src='img/0176.png'>
+<img src='img/0177.png'>
+<img src='img/0178.png'>
+<img src='img/0179.png'>
+<img src='img/0180.png'>
+<img src='img/0181.png'>
+<img src='img/0182.png'>
+<img src='img/0183.png'>
+<img src='img/0184.png'>
+<img src='img/0185.png'>
+<img src='img/0186.png'>
+<img src='img/0187.png'>
+<img src='img/0188.png'>
+<img src='img/0189.png'>
+<img src='img/0190.png'>
+<img src='img/0191.png'>
+<img src='img/0192.png'>
+<img src='img/0193.png'>
+<img src='img/0194.png'>
+<img src='img/0195.png'>
+<img src='img/0196.png'>
+<img src='img/0197.png'>
+<img src='img/0198.png'>
+<img src='img/0199.png'>
+<img src='img/0200.png'>
+
+<hr>
+<br><i>A total of 200 images are displayed</i>
+<br>Size (bytes): min=160, avg=161, max = 162
+<br><a href='http://bioinformatics.bms.com/biocgi/makeRandomImagePage.pl'>Click here</a> to regenerate this page with new file names (prevents client-side caching of images)<br>
+</body></html>
